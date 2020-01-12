@@ -1,0 +1,8 @@
+<div class="student">
+    <h1 [ngStyle]="{'color': color}" >Student</h1>
+    <div *ngFor="let item of arrayList" class=" contain">
+        <div routerLink="/student/view/{{item.id}}"  > {{item.name}}
+            <div class="spic">{{item.spic}}</div>
+        </div>
+        <div class="color" (click)="changeColor(item.color) " [ngStyle]="{'background-color': item.color}" ></div>
+    </div>

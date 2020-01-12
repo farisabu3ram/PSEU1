@@ -1,0 +1,8 @@
+
+<div class="matrials">
+    <h1 [ngStyle]="{'color': color}" >matrials</h1>
+    <div *ngFor="let item of materials">
+        <div routerLink="/material/view/{{item.id}}" class=" contain"> {{item.name}}
+            <div class="spic">{{item.spic}}</div>
+        </div>
+    </div>
